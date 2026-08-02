@@ -1,36 +1,54 @@
-# Python Learning Journal
+# 🐍 Python Learning Journal
 
-Notes and exercises from my Python learning journey, organized by topic.
+![Status](https://img.shields.io/badge/status-actively%20learning-brightgreen)
+![Language](https://img.shields.io/badge/language-Python-blue)
+![Progress](https://img.shields.io/badge/type-learning%20journal-yellow)
 
-## Contents
+> 🚧 **This is a learning journal, not a finished project.** Each folder was added on the day I actually learned that topic. Once my foundational learning is complete, I'll move on to building real, standalone projects — this repo exists to document the process honestly, step by step.
 
-| Folder | Topic |
-|---|---|
-| `01-variables-data-types` | Variables, data types (int, float, str, list, dict, set, range) |
-| `02-string-basics` | String indexing, slicing, concatenation, escape characters |
-| `03-string-methods` | upper/lower, strip, replace, split, title, format(), f-string |
-| `04-operators` | Arithmetic, comparison, logical (and/or/not), identity (is/is not) operators |
-| `05-conditional-statements` | if / elif / else, short hand if |
-| `06-lists` | List access, methods (append, insert, remove, pop, extend, sort...) |
-| `07-while-loops` | while, break, continue, while-else |
-| `08-for-loops` | for, range(), usage with tuples/strings, for-else |
-| `09-nested-loops-enumerate-zip` | Nested loops, enumerate(), zip() |
-| `10-list-comprehension` | Creating lists in a single line |
-| `11-random-module` | random.randint, random.choice, shuffle, sample |
-| `12-mini-projects` | Circle area calculator, factorial, number guessing game, number sorter |
-| `13-dictionaries` | dict access/update/delete, reference vs copy (copy()) |
-| `14-functions` | Function definition, parameters, default values, return, *args, **kwargs |
+## 📌 About
 
-## How to Run
+I'm learning Python with the goal of eventually moving into AI/data-focused work. This repository holds my notes and hands-on exercises, organized by topic in the order I learned them. Every commit corresponds to a specific topic learned on that day — check the [commit history](../../commits/main) to see the full timeline.
+
+## 📚 Contents
+
+| # | Topic | What's Inside |
+|---|---|---|
+| 01 | [Variables & Data Types](01-variables-data-types) | int, float, str, list, dict, set, range |
+| 02 | [String Basics](02-string-basics) | Indexing, slicing, concatenation, escape characters |
+| 03 | [String Methods](03-string-methods) | upper/lower, strip, replace, split, title, f-strings |
+| 04 | [Operators](04-operators) | Arithmetic, comparison, logical (`and`/`or`/`not`), identity (`is`) |
+| 05 | [Conditional Statements](05-conditional-statements) | if / elif / else, short-hand if |
+| 06 | [Lists](06-lists) | Access, slicing, append/insert/remove/pop/sort... |
+| 07 | [While Loops](07-while-loops) | break, continue, while-else |
+| 08 | [For Loops](08-for-loops) | range(), tuples, strings, for-else |
+| 09 | [Nested Loops, enumerate() & zip()](09-nested-loops-enumerate-zip) | Nested iteration, paired iteration |
+| 10 | [List Comprehension](10-list-comprehension) | Writing loops in a single line |
+| 11 | [Random Module](11-random-module) | randint, choice, shuffle, sample |
+| 12 | [Mini Projects](12-mini-projects) | Circle area, factorial, number guessing game, sorter |
+| 13 | [Dictionaries](13-dictionaries) | Access, update, delete, reference vs. copy |
+| 14 | [Functions](14-functions) | Parameters, return, defaults, *args, **kwargs |
+
+## ▶️ How to Run
 
 ```bash
 python 01-variables-data-types/notes.py
 ```
 
-Files inside `12-mini-projects` ask for user input (`input()`), so they should be run in a terminal.
+Files inside `12-mini-projects` expect user input, so run them in a terminal rather than by pasting into an interpreter.
 
-## Key Takeaways
+## 💡 Key Takeaways
 
-- **Methods that mutate in place (append, remove, sort, update, etc.):** modify the list/dict directly and return `None` — no need to wrap them in `print()`.
-- **Methods that return a value (pop, index, count, copy, get, etc.):** return a value that can be printed or stored in a variable.
-- **Assignment (`=`) with mutable types (list, dict, set):** does not create a copy, it shares a reference to the same object. Use `.copy()` for an independent copy.
+- **Methods that mutate in place** (`append`, `remove`, `sort`, `update`...) return `None` — no need to wrap them in `print()`.
+- **Methods that return a value** (`pop`, `index`, `count`, `copy`, `get`...) can be printed or stored in a variable.
+- **Assigning a mutable object** (`list`, `dict`, `set`) with `=` does not copy it — it shares a reference. Use `.copy()` for an independent copy.
+
+## 🎯 What's Next
+
+- NumPy & Pandas
+- Object-Oriented Programming (classes, inheritance)
+- Building small end-to-end projects
+
+---
+
+📎 Also see: [SQL Learning Journal](https://github.com/busesrkya/sql-learning-journal) — the same journal-style approach applied to SQL.
