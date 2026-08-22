@@ -66,11 +66,10 @@ student2 = Student("Hasan", 28)
 student1.introduce()
 student2.introduce()
 
-"""
 Creating objects and using classes:
    - class: template > car
    - object: think of it as the structure produced from the template (mercedes, audi)
-"""
+
 
 class kitap:
     def __init__(self, ad, yazar, sayfa):
@@ -189,3 +188,82 @@ class Student(Person):  # child class (derived class)
 
 p1 = Person("Yılmaz", "Tekin")
 p1.myPrint()
+
+# Using my own methods instead of the inherited class method
+
+class Person:  # parent class or base class
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def myPrint(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):  # child class
+    def __init__(self, fname, lname):
+
+p1 = Student("Su", "Dinçer")
+p1.myPrint()
+
+
+# The super() method:
+class Person:  # parent class or base class
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def myPrint(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):  # child class
+    def __init__(self, fname, lname):
+        super().__init__(fname, lname)
+
+p1 = Student("Su", "Dinçer")
+p1.myPrint()
+
+
+# Creating methods specific to the inheriting class
+class Person:  # parent class or base class
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def myPrint(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):  # child class
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduation = year
+
+    def welcome(self):
+        print(f"Welcome {self.firstname} {self.lastname} to the class of {self.graduation}")
+
+p1 = Student("Su", "Dinçer", 2022)
+p1.welcome()
+
+"""
+
+# Method Overriding:
+class Animal:
+    def speak(self):
+        return "sound"
+
+class Mouse(Animal):
+    pass
+
+class Dog(Animal):
+    def speak(self):  # method overriding
+        return "Bark!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+dog = Dog()
+cat = Cat()
+m = Mouse()
+print(dog.speak())
+print(cat.speak())
+print(m.speak())
